@@ -240,7 +240,8 @@ section {
 	border-bottom: 2px solid;
 }
 
-.linkedin {
+.linkedin,
+.google_drive {
 	display: inline-block;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -248,13 +249,18 @@ section {
 	border-bottom: 1px solid;
 	padding-bottom: 5px;
 	transition:
-		opacity 0.3s ease,
-		transform 0.3s ease;
+		opacity 0.5s ease,
+		transform 0.5s ease;
 }
 
-.linkedin:hover {
+.linkedin:hover,
+.google_drive:hover {
 	opacity: 0.5;
-	transform: translateX(5px);
+}
+
+.google_link {
+	letter-spacing: 1px;
+	margin-bottom: 10px;
 }
 
 .portfolio_header {
