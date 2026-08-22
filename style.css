@@ -235,6 +235,24 @@ section {
 	font-size: 12px;
 }
 
+.software_list {
+	list-style: none;
+}
+
+.software_list li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 0;
+}
+
+.software_list img {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
 .contact {
 	display: grid;
 	grid-template-columns: 160px 1fr;
