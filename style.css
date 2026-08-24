@@ -365,7 +365,6 @@ section {
 	opacity: 0.85;
 }
 
-/* Aspect Ratios instead of fixed pixel heights */
 .photo.thumbnail img {
 	aspect-ratio: 4 / 3;
 }
@@ -382,7 +381,6 @@ section {
 	aspect-ratio: 3 / 4;
 }
 
-/* Caption Alignment */
 figcaption {
 	padding-top: 12px;
 	color: #777777;
