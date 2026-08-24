@@ -10,7 +10,6 @@ html {
 
 body {
 	font-family: 'Radio Canada', sans-serif;
-
 	background: #f4f1eb;
 	color: #111;
 	line-height: 1.5;
@@ -213,6 +212,13 @@ section {
 	margin: 0 0 15px;
 	font-size: 11px;
 	letter-spacing: 2px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.skills_equipment_software h3 i {
+	font-size: 12px;
 }
 
 .skills_equipment_software ul {
@@ -222,17 +228,6 @@ section {
 .skills_equipment_software li {
 	padding: 8px 0;
 	border-bottom: 1px solid #444444;
-}
-
-.skills_equipment_software h3 {
-	display: flex;
-	align-items: center;
-	font-size: 12px;
-	gap: 10px;
-}
-
-.skills_equipment_software h3 i {
-	font-size: 12px;
 }
 
 .software_list {
@@ -349,35 +344,38 @@ section {
 .photo_grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 70px 25px;
+	gap: 25px;
 }
 
 .photo {
 	margin: 0;
 }
 
-.photo.wide {
-	grid-column: span 2;
-}
-
 .photo img {
 	display: block;
 	width: 100%;
-	height: 500px;
-	object-fit: cover;
+	object-fit: contain;
 	transition: opacity 0.5s ease;
 }
 
-.photo.tall img {
-	height: 650px;
+.photo img:hover {
+	opacity: 0.8;
+}
+
+.photo.thumbnail img {
+	height: 500px;
+}
+
+.photo.wide {
+	grid-column: 1 / -1;
 }
 
 .photo.wide img {
 	height: 600px;
 }
 
-.photo img:hover {
-	opacity: 0.8;
+.photo.tall img {
+	height: 1400px;
 }
 
 figcaption {
@@ -628,32 +626,35 @@ footer a:hover {
 		font-size: 10px;
 	}
 
-	.photo_grid,
 	.video_grid {
 		grid-template-columns: 1fr;
 		gap: 45px;
 	}
 
-	.photo.wide {
-		grid-column: auto;
+	.photo_grid {
+		gap: 20px;
 	}
 
-	.photo img,
-	.photo.tall img,
+	.photo.thumbnail img {
+		height: 200px;
+	}
+
 	.photo.wide img {
-		height: auto;
-		aspect-ratio: 4 / 3;
-		object-fit: cover;
+		height: 350px;
 	}
 
-	.video_item video {
-		height: auto;
-		aspect-ratio: 4 / 3;
+	.photo.tall img {
+		height: 700px;
 	}
 
 	figcaption {
 		font-size: 13px;
 		line-height: 1.4;
+	}
+
+	.video_item video {
+		height: auto;
+		aspect-ratio: 4 / 3;
 	}
 
 	footer {
