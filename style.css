@@ -322,11 +322,6 @@ section {
 	padding-top: 50px;
 }
 
-.portfolio_header,
-.portfolio_section {
-	animation: slideUp 0.7s ease-out;
-}
-
 .portfolio_category {
 	display: flex;
 	align-items: baseline;
@@ -339,6 +334,7 @@ section {
 .portfolio_category h2 {
 	font-size: clamp(35px, 5vw, 65px);
 	letter-spacing: -3px;
+	margin: 0;
 }
 
 .photo_grid {
@@ -365,16 +361,16 @@ section {
 	opacity: 0.85;
 }
 
-.photo.thumbnail img {
+.photo.ratio-4-3 img {
 	aspect-ratio: 4 / 3;
 }
 
-.photo.wide {
-	grid-column: 1 / -1;
+.photo.ratio-3-4 img {
+	aspect-ratio: 3 / 4;
 }
 
-.photo.tall img {
-	aspect-ratio: 3 / 4;
+.photo.span-full {
+	grid-column: 1 / -1;
 }
 
 figcaption {
@@ -638,24 +634,18 @@ footer a:hover {
 	}
 
 	.photo_grid {
-		gap: 20px;
+		grid-template-columns: 1fr;
+		gap: 35px;
 	}
 
-	.photo.thumbnail img {
-		height: 200px;
-	}
-
-	.photo.wide img {
-		height: 350px;
-	}
-
-	.photo.tall img {
-		height: 700px;
+	.photo.span-full {
+		grid-column: auto;
 	}
 
 	figcaption {
-		font-size: 15px;
+		font-size: 13px;
 		line-height: 1.4;
+		padding-top: 8px;
 	}
 
 	.video_item video {
