@@ -361,6 +361,10 @@ section {
 	opacity: 0.85;
 }
 
+.photo.span-full {
+	grid-column: 1 / -1;
+}
+
 .photo.ratio-4-3 img {
 	aspect-ratio: 4 / 3;
 }
@@ -371,6 +375,10 @@ section {
 
 .photo.span-full {
 	grid-column: 1 / -1;
+}
+
+.photo.wide img {
+	aspect-ratio: 16 / 9;
 }
 
 figcaption {
