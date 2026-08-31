@@ -366,7 +366,8 @@ section {
 }
 
 .photo.thumbnail img {
-	aspect-ratio: 4 / 3;
+	height: 500px;
+	aspect-ratio: 1 / 1;
 }
 
 .photo.wide {
